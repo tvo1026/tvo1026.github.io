@@ -125,9 +125,7 @@ aside {
 
 aside a {
   display: flex;
-  height: 200px;
-  width: 200px;
-  margin: auto;
+  flex-wrap: wrap;
 }
 
 aside img {
