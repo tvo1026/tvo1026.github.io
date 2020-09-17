@@ -126,7 +126,8 @@ aside {
 aside a {
   display: flex;
   height: 100px;
-  width: 100px;;
+  width: 100px;
+  margin: auto;
 }
 
 aside img {
