@@ -127,8 +127,8 @@ aside a {
   display: flex;
   height: 100px;
   width: 100px;
-  margin: auto;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 aside img {
