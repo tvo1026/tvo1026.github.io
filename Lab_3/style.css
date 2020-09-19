@@ -126,6 +126,7 @@ aside {
   display: flex; 
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
 }
 
 aside a {
@@ -136,7 +137,6 @@ aside a {
 aside img {
   width: 85px;
   height: 85px;
-  align-content: center;
 }
 
 footer {
