@@ -125,10 +125,11 @@ aside {
   padding: 1%;
   display: flex; 
   flex-wrap: wrap; 
+  justify-content: center;
 }
 
 aside a {
-  width: 50%;
+  width: 45%;
 }
 
 
