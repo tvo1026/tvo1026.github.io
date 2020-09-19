@@ -134,7 +134,7 @@ aside a {
 aside img {
   width: 100px;
   height: 100px;
-  flex: 0 0  22.222222%;
+  flex: 0 50%;
 }
 
 footer {
