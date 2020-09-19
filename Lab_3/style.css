@@ -125,6 +125,7 @@ aside {
   padding: 1%;
   display: flex; 
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 aside a {
@@ -134,8 +135,7 @@ aside a {
 
 aside img {
   width: 90px;
-  height: 90px;
-  justify-content: center;
+  height: 90px;;
 }
 
 footer {
