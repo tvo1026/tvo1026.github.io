@@ -130,13 +130,13 @@ aside {
 
 aside a {
   width: 45%;
-  align-content: center;
 }
 
 
 aside img {
   width: 85px;
   height: 85px;
+  align-content: center;
 }
 
 footer {
