@@ -137,6 +137,7 @@ aside a {
 aside img {
   width: 85px;
   height: 85px;
+  align-content: center;
 }
 
 footer {
