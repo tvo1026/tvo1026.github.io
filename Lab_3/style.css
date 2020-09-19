@@ -129,7 +129,10 @@ aside a {
   display: flex; 
   flex-wrap: wrap; 
   justify-content: space-between;
-  width: 30%;
+}
+
+aside a .col {
+  width: 32%
 }
 
 aside img {
