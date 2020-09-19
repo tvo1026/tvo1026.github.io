@@ -126,6 +126,7 @@ aside {
   display: flex; 
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
 }
 
 aside a {
