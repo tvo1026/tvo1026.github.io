@@ -120,20 +120,20 @@ article, section {
 }
 
 aside {
-  flex: 2;
+  flex: 1;
   margin-left: 10px;
   padding: 1%;
 }
 
 aside a {
   display: flex; 
-  flex-wrap: wrap; 
-  flex-direction: row;
 }
 
 aside img {
   width: 100px;
   height: 100px;
+  flex-wrap: wrap; 
+  flex-direction: row;
 }
 
 footer {
