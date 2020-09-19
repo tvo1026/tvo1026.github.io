@@ -127,13 +127,14 @@ aside {
 
 aside a {
   display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: row;
+  width: 50%;
 }
 
 aside img {
   width: 100px;
   height: 100px;
-  flex-wrap: wrap; 
-  flex-direction: row;
 }
 
 footer {
