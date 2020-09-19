@@ -129,7 +129,7 @@ aside a {
   display: flex; 
   flex-wrap: wrap; 
   flex-direction: row;
-  width: 50%;
+  width: 30%;
 }
 
 aside img {
