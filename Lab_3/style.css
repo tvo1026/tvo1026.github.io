@@ -123,17 +123,15 @@ aside {
   flex: 1;
   margin-left: 10px;
   padding: 1%;
-}
-
-aside a {
   display: flex; 
   flex-wrap: wrap; 
   justify-content: space-between;
 }
 
-aside a .col {
-  width: 32%
+aside a {
+  width: 32%;
 }
+
 
 aside img {
   width: 100px;
