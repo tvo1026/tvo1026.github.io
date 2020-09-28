@@ -1,0 +1,42 @@
+/* Header */
+.header {
+    background-color: #305244;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: space-between;
+    font-family: 'Sniglet', cursive;
+    font-size: 28px;
+}
+
+.header img{
+    width: 200px;
+}
+
+/* Body */
+.wrapper{
+    display: flex;
+}
+
+.content{
+    font-family: 'Sniglet', cursive;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Image */
+.image{
+    display: plex;
+    flex-wrap: wrap;
+    margin-right: 4px;
+}
+
+
+.image img{
+    height: 300px;
+}
+
+/* History */
+.history{
+    flex: 4;
+}
