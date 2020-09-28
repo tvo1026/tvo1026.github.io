@@ -1,12 +1,13 @@
 /* Header */
 .header {
     background-color: #305244;
-    color: white;
+    color: #E3FFF9;
+    font-size: 28px;
+    font-family: 'Sniglet', cursive;
     display: flex;
     flex-wrap: wrap;
     place-content: space-between;
-    font-family: 'Sniglet', cursive;
-    font-size: 28px;
+    margin-bottom: 15px;
 }
 
 .header img{
@@ -14,32 +15,30 @@
 }
 
 /* Body */
-.wrapper{
-    display: flex;
-}
-
 .content{
+    width: 960px;
     font-family: 'Sniglet', cursive;
     display: flex;
     flex-wrap: wrap;
+    border: solid 2px;
+    margin: 0 auto;
 }
 
 /* Image */
-.image{
+.image p{
+    border: solid 1px;
+    margin: auto auto;
+}
+.image img{
+    height: 300px;
     display: plex;
     flex-wrap: wrap;
     margin-right: 4px;
-}
-
-.image p{
-    flex-wrap: wrap;
-}
-
-.image img{
-    height: 300px;
+    border: dotted 2px;
 }
 
 /* History */
 .history{
-    flex: 4;
+    border: dotted 1px;
+    flex: 1;
 }
