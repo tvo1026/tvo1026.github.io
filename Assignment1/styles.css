@@ -24,18 +24,20 @@
 }
 
 /* Image */
-.image p{
-    border: solid 1px;
-    width: 300px;
-    display: plex;
-    flex-wrap: wrap;
-}
 .image img{
     width: 300px;
     display: plex;
     flex-wrap: wrap;
     margin-right: 4px;
     border: solid 1px;
+}
+
+.image p{
+    border: solid 1px;
+    width: 300px;
+    margin-top: auto;
+    display: plex;
+    flex-wrap: wrap;
 }
 
 /* History */
