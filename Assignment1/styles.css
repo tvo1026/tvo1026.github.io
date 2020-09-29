@@ -18,6 +18,8 @@
 /* Body */
 .wrapper{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .content{
@@ -28,41 +30,47 @@
     margin: 0 auto;
 }
 
-/* Image */
-.image img{
+/* Left Column */
+.left-column{
+    flex: 30%;
+}
+
+.image{
     width: 300px;
-    display: plex;
-    flex-wrap: wrap;
     border: solid 1px;
     border-radius: 4px;
     background-color: mintcream;
 }
 
-.image p{
+.goal{
     border: solid 1px;
     width: 300px;
     margin-top: auto;
-    display: plex;
-    flex-wrap: wrap;
     background-color: honeydew;
 }
 
-/* History */
-.history{
+/* Right Column */
+.right-column{
     border: solid 1px;
-    flex: 1;
+    flex: 60%;
     font-family: 'Sniglet', cursive;
     background-color: honeydew;
 }
 
 /* Breakpoint */
 @media only screen and (max-width: 1000px){
-    .image {
+    .content{
         display: flex;
-        justify-content: space-evenly;
-        margin-bottom: 5px;
+        justify-content: center;
     }
-    .content {
-        margin: 0 auto;
+    .left-column{
+        display: flex;
+        margin-bottom: 10%;
+    }
+
+    .right-column{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100px;
     }
 }
