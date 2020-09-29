@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     place-content: space-between;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .header img{
