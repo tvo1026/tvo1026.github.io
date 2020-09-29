@@ -25,12 +25,17 @@
 }
 
 /* Image */
+.image{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .image p{
     border: solid 1px;
-    margin: auto auto;
+    width: 100px;
 }
 .image img{
-    height: 300px;
+    width: 300px;
     display: plex;
     flex-wrap: wrap;
     margin-right: 4px;
