@@ -20,7 +20,6 @@
     font-family: 'Sniglet', cursive;
     display: flex;
     flex-wrap: wrap;
-    border: solid 2px;
     margin: 0 auto;
 }
 
@@ -41,6 +40,6 @@
 
 /* History */
 .history{
-    border: dotted 1px;
+    border: solid 1px;
     flex: 1;
 }
