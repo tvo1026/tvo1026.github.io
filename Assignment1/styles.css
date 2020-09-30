@@ -20,6 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
 }
 
 .content{
@@ -44,7 +45,6 @@
 .goal{
     border: solid 1px;
     width: 300px;
-    margin-top: auto;
     background-color: honeydew;
 }
 
@@ -75,7 +75,6 @@
     }
 
     .right-column{
-        display: flex;
         flex-wrap: wrap;
         margin: 0 auto;
     }
