@@ -3,23 +3,23 @@
     background-color: #305244;
     color: #E3FFF9;
     font-size: 28px;
-    font-family: 'Sniglet', cursive;
+    font-family: 'Passion One', cursive;
+    font-weight: 700;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     place-content: space-between;
     margin-bottom: 15px;
-    width: 100%;
 }
 
-.header img{
+.logo{
     width: 200px;
 }
 
 /* Body */
 .wrapper{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-flow: wrap column;
     align-items: center;
 }
 
@@ -43,16 +43,18 @@
 }
 
 .goal{
-    border: solid 1px;
+    margin-top: 1px;
     width: 300px;
+    border: solid 1px;
     background-color: honeydew;
 }
 
 /* Right Column */
 .right-column{
-    border: solid 1px;
     flex: 60%;
+    border: solid 1px;
     font-family: 'Sniglet', cursive;
+    font-weight: 400;
     background-color: honeydew;
 }
 
