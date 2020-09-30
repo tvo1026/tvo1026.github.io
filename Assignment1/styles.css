@@ -63,9 +63,16 @@
         display: flex;
         justify-content: center;
     }
+
     .left-column{
         display: flex;
+        justify-content: space-evenly;
         margin-bottom: 10%;
+    }
+
+    .goal{
+        display: flex;
+        align-self: center;
     }
 
     .right-column{
