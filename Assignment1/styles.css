@@ -71,6 +71,7 @@
     .right-column{
         display: flex;
         flex-wrap: wrap;
-        width: 100px;
+        width: 100%;
+        margin: auto;
     }
 }
