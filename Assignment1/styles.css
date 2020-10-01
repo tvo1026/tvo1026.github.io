@@ -17,11 +17,16 @@
 }
 
 /* Body */
+.all-contents{
+    background-color:#EFF5E0;
+    padding: 0px;
+    margin: 0px;
+}
+
 .wrapper{
     display: flex;
     flex-flow: wrap column;
     align-items: center;
-    background-color:#EFF5E0;
 }
 
 .content{
@@ -29,6 +34,14 @@
     font-family: serif;
     display: flex;
     flex-wrap: wrap;
+}
+
+.description{
+    font-family: serif;
+}
+
+.job{
+    font-family: serif;
 }
 
 /* Left Column */
