@@ -41,9 +41,6 @@
     font-family: serif;
 }
 
-.job{
-    font-family: serif;
-}
 
 /* Left Column */
 .left-column{
@@ -66,7 +63,7 @@
 /* Right Column */
 .right-column{
     flex: 60%;
-    font-family: 'Sniglet', cursive;
+    font-family: 'Passion One', cursive;
     font-weight: 400;
     background-color: honeydew;
 }
