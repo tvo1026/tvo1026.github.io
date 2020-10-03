@@ -4,7 +4,6 @@
     color: #E3FFF9;
     font-size: 28px;
     font-family: 'Passion One', cursive;
-    font-weight: 700;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -66,7 +65,6 @@
 .right-column{
     flex: 67%;
     font-family: 'Passion One', cursive;
-    font-weight: 400;
     background-color: honeydew;
 }
 
