@@ -44,8 +44,10 @@
 
 /* Left Column */
 .left-column{
-    flex: 30%;
+    flex: 33%;
+    max-width: 350px;
 }
+
 
 .image{
     width: 300px;
@@ -62,7 +64,7 @@
 
 /* Right Column */
 .right-column{
-    flex: 60%;
+    flex: 67%;
     font-family: 'Passion One', cursive;
     font-weight: 400;
     background-color: honeydew;
