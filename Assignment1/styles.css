@@ -44,7 +44,6 @@
 /* Left Column */
 .left-column{
     flex: 33%;
-    max-width: 350px;
 }
 
 
