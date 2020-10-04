@@ -42,7 +42,7 @@
 }
 
 .image{
-    width: 300px;
+    max-width: 300px;
     border: solid 1px;
     border-radius: 4px;
     background-color: mintcream;
@@ -50,7 +50,7 @@
 
 .goal{
     margin-top: 1px;
-    width: 300px;
+    max-width: 300px;
     background-color: honeydew;
 }
 
