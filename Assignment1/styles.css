@@ -36,16 +36,10 @@
     flex-wrap: wrap;
 }
 
-.description{
-    font-family: serif;
-}
-
-
 /* Left Column */
 .left-column{
     flex: 33%;
 }
-
 
 .image{
     width: 300px;
@@ -65,6 +59,10 @@
     flex: 67%;
     font-family: 'Passion One', cursive;
     background-color: honeydew;
+}
+
+.description{
+    font-family: serif;
 }
 
 /* Breakpoint */
