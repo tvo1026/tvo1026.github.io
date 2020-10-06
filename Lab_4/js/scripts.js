@@ -19,7 +19,7 @@ document.body.appendChild(paragraphs);
 let name = "Thinh Vo"
 firstPa.append(" my name has " + name.length + " characters (including the space)");
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
-let firstLine = secondPa.append("the third character of my name is: " + name.charAt(2));
+let firstLine = secondPa.append("the third character of my first name is: " + name.charAt(2));
 secondPa.appendChild(document.createElement("br"));
 // 6 Add a new line to your second paragraph
 let secondLine = document.createElement("p");
