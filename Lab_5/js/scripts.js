@@ -50,14 +50,15 @@ ctry = [
     {name: "Maldives", code: "MV"}
 ];
 
-function getFullCountry(item) {
-    let fullcountry = "<ol>" + [item.name,item.code].join(" ") + "</ol>";
-    return fullcountry;
+function display() {
+    let newContent = document.querySelector(".content");
+    newContent.innerHTML = "<ol>" + ctry.map(function (getCountry) {
+        return "<li>" + getCountry.name + " " + getCountry.code + "</li>";
+    }).join("") + "</ol>";
 }
 
-function display() {
-    document.getElementsByClassName("content")[0].innerHTML = ctry.map(getFullCountry).sort();
-}
+
+
 
 //Button Works
 btn.addEventListener("click", display);
