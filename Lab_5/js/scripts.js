@@ -49,7 +49,7 @@ let getRandom = function(list) {
 };
 
 let getCountry = function(country) {
-    let fullCountry = [country.name,country.code].join(" ");
+    let fullCountry = [country.name,country.code.bold()].join(" ");
     return "<li>" + fullCountry + "</li>"
 }
 
