@@ -44,13 +44,13 @@ ctry = [
 ];
 
 //Random countries
-let getRandom = function(list) {
-    return list[Math.floor((Math.random() * list.length))];
-};
+function randomIndex(min, max) {
+    return Math.floor(Math.random() * (max-min) + min);
+}
 
-let getCountry = function(country) {
+function getCountry(country) {
     let fullCountry = [country.name,country.code.bold()].join(" ");
-    return "<li>" + fullCountry + "</li>"
+    return "<li>" + fullCountry + "</li>";
 }
 
 //Display the result
