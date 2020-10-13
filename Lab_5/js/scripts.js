@@ -4,14 +4,7 @@ ctry.className = "countries";
 // Button
 const btn = document.querySelector("button");
 
-
-//Random Countries
-function random(number) {
-    return Math.floor(Math.random() * 26);
-  }
-
-
-//Inject a new list of Countries
+//Inject a new list of countries
 ctry = [
     {name: "Argentina", code: "AR"},
     {name: "Australia", code: "AU"},
@@ -50,15 +43,21 @@ ctry = [
     {name: "Maldives", code: "MV"}
 ];
 
-function display() {
-    let newContent = document.querySelector(".content");
-    newContent.innerHTML = "<ol>" + ctry.map(function (getCountry) {
-        return "<li>" + getCountry.name + " " + getCountry.code + "</li>";
-    }).join("") + "</ol>";
+//Random countries
+let getRandom = function(list) {
+    return list[Math.floor((Math.random() * list.length))];
+};
+
+let getCountry = function(country) {
+    let fullCountry = [country.name,country.code].join(" ");
+    return "<li>" + fullCountry + "</li>"
 }
 
+//Display the result
+function display() {
+    let newContent = document.querySelector(".content");
+    newContent.innerHTML = "<ol>" + ctry.map(getCountry).join("") + "</ol>";
+}
 
-
-
-//Button Works
+//Button 
 btn.addEventListener("click", display);
