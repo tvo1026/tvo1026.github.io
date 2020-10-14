@@ -4,7 +4,7 @@ content.className = "content";
 document.body.append(content);
 
 // Button
-const btn = document.querySelector("button");
+const btn = document.querySelector(".get");
 
 //Inject a new list of countries
 const countries = [
