@@ -270,10 +270,8 @@ function shuffleArray(array) {
 function display() {
     //Shuffle the array of countries
     const a = shuffleArray(countries);
-    console.log(a);
     //Slice the first 25
     const twentyFive = a.slice(0,25);
-    console.log(twentyFive);
     //Slice the rest
     const rest = a.slice(25);
     console.log(rest);
