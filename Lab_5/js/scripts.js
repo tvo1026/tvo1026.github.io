@@ -1,3 +1,8 @@
+//DIV into HTML
+const content = document.createElement("div");
+content.className = "content";
+document.body.append(content);
+
 // Button
 const btn = document.querySelector("button");
 
@@ -274,7 +279,7 @@ function display() {
     console.log(rest);
     //Displaying
     let fullCountries = twentyFive.map(shuffleArray);
-    const full = fullCountries.map(a => `<li> ${a.name} ${a.code.bold()} </li>`).join("")
+    const full = fullCountries.map(a => `<li> ${a.name}, ${a.code.bold()} </li>`).sort().join("")
     document.querySelector(".content").innerHTML = "<ol>" + full + "</ol>";
 };
 

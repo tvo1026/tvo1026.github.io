@@ -1,0 +1,25 @@
+.header{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.get{
+    border: none;
+    background-color: teal;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 15px 125px;
+    cursor: pointer;
+}
+
+.content{
+    border: solid 1px;
+    max-width: 400px;
+}
+
+body{
+    background-color: #D1F4F4;
+}
+
