@@ -247,25 +247,38 @@ const countries = [
     { name: "Zambia", code: "ZM" },
     { name: "Zimbabwe", code: "ZW" }
   ];
-  console.log("List of countries in the world", countries);
   countries.className = "countries";
-  
+  console.log(countries);
+
 
 //Random countries
-function randomIndex(min, max) {
-    return Math.floor(Math.random() * (max-min) + min);
-}
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i --) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+};
 
-function getCountry(country) {
-    let fullCountry = [country.name,country.code.bold()].join(" ");
-    return "<li>" + fullCountry + "</li>";
-}
-
-//Display the result
 function display() {
-    let newContent = document.querySelector(".content");
-    newContent.innerHTML = "<ol>" + countries.map(getCountry).join("") + "</ol>";
-}
+    //Shuffle the array of countries
+    const a = shuffleArray(countries);
+    console.log(a);
+    //Slice the first 25
+    const twentyFive = a.slice(0,25);
+    console.log(twentyFive);
+    //Slice the rest
+    const rest = a.slice(25);
+    console.log(rest);
+    //Displaying
+    let fullCountries = twentyFive.map(shuffleArray);
+    const full = fullCountries.map(a => `<li> ${a.name} ${a.code.bold()} </li>`).join("")
+    document.querySelector(".content").innerHTML = "<ol>" + full + "</ol>";
+    console.log(full)
+};
+
 
 //Button 
 btn.addEventListener("click", display);
