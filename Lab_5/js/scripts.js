@@ -276,7 +276,6 @@ function display() {
     let fullCountries = twentyFive.map(shuffleArray);
     const full = fullCountries.map(a => `<li> ${a.name} ${a.code.bold()} </li>`).join("")
     document.querySelector(".content").innerHTML = "<ol>" + full + "</ol>";
-    console.log(full)
 };
 
 
