@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="css/form_styles.css">
 </head>
 <body>
-    
+    <header>HTML Forms Lab</header>
+    <form action="https://fierce-taiga-97625.herokuapp.com/lab" method="post">
+        <div class="label_name">
+            <label for="user_name">Name</label>
+            <input type="text" id="user_name" name="name" max="140" value="Your name here..">
+        </div>
+        <div>
+            <label for="msg">Interests</label>
+            <textarea id="msg" name="interests" rows="5" cols="33">Please type your message here..</textarea>
+        </div>
+        <div class="button">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 </body>
 </html>

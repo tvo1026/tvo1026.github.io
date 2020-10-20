@@ -1,0 +1,61 @@
+body{
+    background-color: cornflowerblue;
+}
+
+header{
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text], select {
+    width: 70%;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  textarea{
+    width: 100%;
+    margin: 8px 0;
+    display: inline-block;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 300px;
+    /* Form outline */
+    padding: 1em;
+  }
+  
+  div {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Uniform size & alignment */
+    display: flex;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .button {
+    padding-left: 0;
+  }
+  
+  button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    background-color: azure;
+  }
