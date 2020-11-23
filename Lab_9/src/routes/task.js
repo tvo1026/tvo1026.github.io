@@ -88,7 +88,7 @@ router.delete('/task/:id', (req, res) => {
         return res.status(400).send('Missing URL parameter taskId')
     }
     db.run(
-        'DELETE FROM user WHERE taskId = ?',
+        'DELETE FROM tasklist WHERE id = ?',
         req.params.id,
         function (err, result) {
             if (err) {
@@ -96,7 +96,7 @@ router.delete('/task/:id', (req, res) => {
                 return;
             }
             res.json({
-                message:"success", 
+                "message":"success", 
                 changes: this.changes
             })
         }
