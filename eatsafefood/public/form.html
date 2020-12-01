@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Eat Safe Foods</title>
+        <link rel = "icon" href = "https://image.flaticon.com/icons/png/128/3649/3649260.png" type = "image/x-icon">
+        <script defer src="js/scripts.js"></script>
+        <link rel="stylesheet" href="css/formStyle.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="flex-container">
+            <a href="./index.html"><img id="logo" src="./img/logo.png"/></a>
+            <nav>
+                <span><a href="./index.html">Main</a></span>
+                <span><a>Map</a></span>
+                <span><a>Report Form</a></span>
+            </nav>
+        </header>
+
+        <!-- Main Content Container -->
+        <div class="main">
+
+            <div class="flexbox-item">
+                <!--<POST>-->
+                    <h1>Report Form</h1>
+                    <hr>
+                    <label for="userName">User Name:</label><br>
+                    <input type="text" id="userName" name="userName" required/><br>
+                    <label for="restaurantName">Restaurant Name:</label><br>
+                    <input type="text" id="restaurantName" name="restaurantName" required/><br>
+                    <label for="address">Address:</label><br>
+                    <input type="text" id="address" name="address" required/><br>
+                    <label for="city">City:</label><br>
+                    <input type="text" id="city" name="city" required/><br>
+                    <label for="zipCode">Zipcode:</label><br>
+                    <input type="number" id="zipcode" name="zipcode" required/><br>
+                    <label for="date">Date visited:</label><br>
+                    <input type="date" id="date" id="date" name="date" min="2020-03-01" max="2022-12-31"><br>
+                    <button onclick="submitUser()" class="flexbox-button">Submit</button>
+                <p id="postUserContent"></p>
+            </div>
+    
+            <div class="flexbox-item">
+                <!--<GET>-->
+                <div>
+                    <label for="userZipcode">Zipcode:</label><br>
+                </div>
+                <div><input type="number" id="userZipcode" />
+                </div>
+                <div><button onclick="getUser()" class="flexbox-button">Get Result</button>
+                </div>
+                <div>
+                    <p id="getUserContent"></p>
+                </div>
+            </div>
+    
+            <div class="flexbox-item">
+                <!--<PUT>-->
+                <div>
+                    <label for="updateUser">Please enter your username to update:</label><br>
+                </div>
+                <div><input type="text" id="updateUser"/>
+                </div>
+                <label for="updateRestaurantName">New Restaurant Name:</label><br>
+                <input type="text" id="updateRestaurantName" required/><br>  
+                <label for="updateAdress">New Address:</label><br>
+                <input type="text" id="updateAddress" required/><br>  
+                <label for="updateCity">New City:</label><br>
+                <input type="text" id="updateCity" required/><br>         
+                <label for="updateZipcode">New Zipcode:</label><br>
+                <input type="number" id="updateZipcode" required/><br>    
+                <label for="updateDate">New date:</label><br>
+                <input type="date" id="updateDate" id="updateDate" name="updateDate" min="2020-03-01" max="2022-12-31"><br>
+                <button onclick="updateUser()" class="flexbox-button">Update Task</button>
+                <p id="updatedUserContent"></p>
+            </div>
+
+            <div class="flexbox-item">
+                <!--<DELETE>-->
+                <label for="deleteUserName">Please enter your username to delete:</label><br>
+                <input type="text" id="deleteUserName" /><br>
+                <button onclick="deleteUser()" class="flexbox-button">Delete User</button>
+                <p id="deleteUserContent"></p>
+    
+            </div>
+            </form>
+        </div>
+
+        <!-- Footer Section -->
+        <footer id="about">
+            <p>GGTea: Gaurav Dali, Gabriel Estrella, Akpokli Foli Sosro, Edward Trabucco, Thinh Vo</p>
+            <p>USG @2020</p>
+        </footer>
+    </body>
+</html>
