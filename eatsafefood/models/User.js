@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const connection = mongoose.connect(
-    "mongodb://localhost:27017/final",
+    "mongodb+srv://final:project@cluster0.cj0by.mongodb.net/<dbname>?retryWrites=true&w=majority",
     { useNewUrlParser: true },
     () => console.log('Connected to DB!'));
 
