@@ -1,3 +1,50 @@
+const buttonChange = () => {
+// grab all the buttons
+let Buttons = document.querySelectorAll(".selectSection button");
+
+// loop through the buttons using for..of 
+for (let button of Buttons) {
+
+ // listen for a click event 
+ button.addEventListener('click', (e) => {
+  // Store the event target in a const
+  const et = e.target;
+
+  // select active class
+  const active = document.querySelector(".active");
+
+  /* when a button is clicked, remove the active class 
+from the button that has it */
+  if (active) {
+    active.classList.remove("active");
+   }
+
+  // Add active class to the clicked element
+  et.classList.add("active");
+
+  // select all classes with the name content
+  let allContent = document.querySelectorAll('.content');
+
+  // loop through all content classes
+  for (let content of allContent) {
+
+    /* display the content if the value in the data attribute of the button and content are the same */
+    if(content.getAttribute('data-number') === button.getAttribute('data-number')) {
+      content.style.display = "flex";
+     }
+
+     // if it's not equal then hide it.
+     else {
+        content.style.display = "none";
+      }
+    }
+ });
+}
+}
+
+// Call buttonChange function 
+buttonChange();
+
 // POST method
 function submitUser() {
     console.log("Called submitUser");
@@ -8,15 +55,7 @@ function submitUser() {
     let cityParam = document.getElementById("city").value;
     let zipcodeParam = document.getElementById("zipcode").value;
     let dateParam = document.getElementById("date").value;
-
-    console.log("userName:" + userNameParam);
-    console.log("restaurantName:" + restaurantNameParam);
-    console.log("address:" + addressParam);
-    console.log("city:" + cityParam);
-    console.log("zipcode:" + zipcodeParam);
-    console.log("date:" + dateParam);
     let data = {'userName':userNameParam, 'restaurantName':restaurantNameParam, 'address': addressParam, 'city': cityParam, 'zipcode': zipcodeParam, 'date': dateParam};
-    
     console.log(JSON.stringify(data))
 
     let userURL = "http://localhost:5000/users/";
@@ -30,8 +69,6 @@ function submitUser() {
       })
       .then((user) => {
         console.log(user);
-        let userJson = JSON.stringify(user);
-        console.log(userJson)
         if (user) {
           let userId = user._id;
           let userName = user.userName;
@@ -41,7 +78,11 @@ function submitUser() {
           let zipcode = user.zipcode;
           let date = user.date;
           let message = "Id: " + userId + "<br>userName: " + userName + "<br>restaurantName: " + restaurantName + "<br>address: " + address + "<br>city: " + city + "<br>zipcode: " + zipcode + "<br>date: " + date; 
-          document.getElementById("postUserContent").innerHTML = message; //Still need to work on this
+          if (typeof userId === "undefined") {
+            window.alert("Sorry. Please input all the required fields or change your username.");
+          } else {
+            document.getElementById("postUserContent").innerHTML = message; 
+          }
         }
     })
     .catch((err) => {
@@ -55,8 +96,6 @@ function submitUser() {
       console.log("Called getUser");
     
       let userZipcode = document.getElementById("userZipcode").value;
-      console.log("Zipcode: " + userZipcode);
-
       let userURL = "http://localhost:5000/users/" + userZipcode;
       const fetchPromise = fetch(userURL);
   
@@ -66,8 +105,40 @@ function submitUser() {
         })
         .then((user) => {
           console.log(user);
-          let userJson = JSON.stringify(user);
-          document.getElementById("getUserContent").innerHTML = userJson; // Still need to work on this
+          // CONVERT JSON TO TABLE
+          let col = [];
+          for (let i = 0; i < user.length; i++) {
+              for (let key in user[i]) {
+                  if (col.indexOf(key) === -1) {
+                      col.push(key);
+                  }
+              }
+          }
+          // CREATE DYNAMIC TABLE.
+          let table = document.createElement("table");
+  
+          // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+          let tr = table.insertRow(-1);                   // TABLE ROW.
+  
+          for (let i = 0; i < col.length; i++) {
+              let th = document.createElement("th");      // TABLE HEADER.
+              th.innerHTML = col[i];
+              tr.appendChild(th);
+          }
+  
+          // ADD JSON DATA TO THE TABLE AS ROWS.
+          for (let i = 0; i < user.length; i++) {
+              tr = table.insertRow(-1);
+              for (let j = 0; j < col.length; j++) {
+                  let tabCell = tr.insertCell(-1);
+                  tabCell.innerHTML = user[i][col[j]];
+              }
+          }
+  
+          // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+          let divContainer = document.getElementById("getUserContent");
+          divContainer.innerHTML = "";
+          divContainer.appendChild(table);
       })
       .catch((err) => {
           console.log(err);
@@ -76,7 +147,7 @@ function submitUser() {
      
   }
   
-  // POST method
+  // PUT method
   function updateUser() {
     console.log("Called updateUser");
     
@@ -86,14 +157,6 @@ function submitUser() {
     let updateCityParam = document.getElementById("updateCity").value;
     let updateZipcodeParam = document.getElementById("updateZipcode").value;
     let updateDateParam = document.getElementById("updateDate").value;
-
-    console.log("UserName:" + updateUserNameParam);
-    console.log("RestaurantName" + updateRestaurantNameParam);
-    console.log("Address:" + updateAddressParam);
-    console.log("City:" + updateCityParam);
-    console.log("Zipcode:" + updateZipcodeParam);
-    console.log("Date" + updateDateParam);
-
     data = {'userName': updateUserNameParam, 'restaurantName':updateRestaurantNameParam, 'address':updateAddressParam, 'city':updateCityParam, 'zipcode':updateZipcodeParam, 'date':updateDateParam};
     console.log(JSON.stringify(data))
 
@@ -108,25 +171,29 @@ function submitUser() {
         return response.json();
       })
       .then((user) => {
-        console.log("Here Update");
         console.log(user);
-        let message = "ERROR";
+        let message = "";
+        let userName = data.userName;
+        let restaurantName = data.restaurantName;
+        let address = data.address;
+        let city = data.city;
+        let zipcode = data.zipcode;
+        let date = data.date;
         if (user) {
-          let userName = data.userName;
-          let restaurantName = data.restaurantName;
-          let address = data.address;
-          let city = data.city;
-          let zipcode = data.zipcode;
-          let date = data.date;
           message = "Your username is updated successfully" + "<br>userName: " + userName + "<br>restaurantName: " + restaurantName + "<br>address: " + address + "<br>city: " + city + "<br>zipcode: " + zipcode + "<br>date: " + date; 
+          if (user.n === 0) {
+            window.alert("Sorry. Your username does not exist. Please try again");
+          } else if ((userName === "") || (restaurantName === "") || (address === "") || (city === "") || (zipcode === "")) {
+            window.alert("Please enter all the required fields.");
+          } else {
+            document.getElementById("updatedUserContent").innerHTML = message;
+          }
         }
-        document.getElementById("updatedUserContent").innerHTML = message;
     })
     .catch((err) => {
         console.log(err);
-        document.getElementById("updatedUserContent").innerHTML = "Invalid userName: " + userNameParam;
+        document.getElementById("updatedUserContent").innerHTML = "Invalid userName: " + updateUserNameParam;
     });
-   
   }
   
   // DELETE method
@@ -135,7 +202,6 @@ function submitUser() {
   
     let deleteUserNameParam = document.getElementById("deleteUserName").value;
     console.log("userName:" + deleteUserNameParam);
-    
     let userURL = "http://localhost:5000/users/" + deleteUserNameParam;
     const fetchPromise = fetch(userURL,{ method:'DELETE'});
   
@@ -148,12 +214,16 @@ function submitUser() {
         let message = "";
         if (user) {
           message = deleteUserNameParam + " is deleted"; 
+          if (user.deletedCount === 0) {
+            window.alert("Sorry. Your username does not exist. Please try again");
+          } else {
+            document.getElementById("deleteUserContent").innerHTML = message;
+          }
         }
-        document.getElementById("deleteUserContent").innerHTML = message;
     })
     .catch((err) => {
         console.log(err);
-        document.getElementById("deleteUserContent").innerHTML = "Invalid username: " + userNameParam;
+        window.alert("Please enter the required field");
     });
-   
-  }
+  };
+
