@@ -65,7 +65,7 @@ router.get('/task', (req, res) => {
 })
 
 //GET ALL
-router.get('/', (req,res) => {
+router.get('/tasks', (req,res) => {
     let sql = "select *" + " from tasks";
     let params = [req.query]
     db.all(sql, (err, row) => {

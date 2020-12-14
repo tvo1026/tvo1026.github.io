@@ -347,7 +347,7 @@ function submitNewGroup() {
 /*
  ------ SEARCH TASK ------
 */
-const taskURL = 'http://localhost:4000/';
+const taskURL = 'http://localhost:4000/tasks';
 const tasks = [];
 fetch(taskURL) 
   .then(blob => blob.json())
